@@ -3,12 +3,8 @@ from apps.book.models import Author
 
 
 class AuthorSerializer(serializers.ModelSerializer): 
-    # TODO: Specify the model that this serializer will link to 
-    # TODO: Specify which fields dhould be considered in the model 
-
-    # Force django REST to recognize the method
-    name = serializers.CharField(read_only=True) # by the default read-only
-    # Create a serialized method
+   
+    name = serializers.CharField(read_only=True) 
     username = serializers.SerializerMethodField()
 
     # Serialized method's implemetation

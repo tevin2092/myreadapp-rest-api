@@ -16,4 +16,4 @@ class CreateBookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = "__all__"
+        exclude = ('authors',)
